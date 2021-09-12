@@ -1,9 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import {MainLayout} from '../styles/Layouts';
+import Skills from '../Components/Skills';
+import Resume from '../Components/Resume';
 
 function ResumePage(){
     return(
-        <ResumePageStyled></ResumePageStyled>
+        <ResumePageStyled>
+            <MainLayout>
+                <Skills />
+                <Resume />
+            </MainLayout>
+        </ResumePageStyled>
     );
 }
 
