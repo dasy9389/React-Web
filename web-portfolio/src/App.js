@@ -1,4 +1,5 @@
-import { Switch, Route } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Switch as Switching, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Sidebar from './Components/Sidebar';
 import HomePage from './Pages/HomePage';
@@ -7,11 +8,48 @@ import ResumePage from './Pages/ResumePage';
 import PortfolioPage from './Pages/PortfolioPage';
 import BlogsPage from './Pages/BlogsPage';
 import ContactPage from './Pages/ContactPage';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Switch from '@material-ui/core/Switch';
 
 function App() {
+  const [theme, setTheme] = useState('dark-theme');
+  const [checked, setChecked] = useState(false);
+
+  useEffect(()=>{
+    document.documentElement.className = theme;
+  });
+
+  const themeToggle = () =>{
+    if(theme ===  'light-theme'){
+      setTheme('dark-theme');
+      setChecked(false);
+    }else{
+      setTheme('light-theme');
+      setChecked(true);
+    }
+  }
+  
+
+
   return (
     <div className='App'>
       <Sidebar />
+
+      <div className='theme'>
+        <div className='light-dark-mode'>
+          <div className='left-content'>
+            <Brightness4Icon />
+          </div>
+          <div className='right-content'>
+            <Switch
+              value=""
+              inputProps={{ 'aria-label': '' }}
+              checked={checked}
+              onClick={themeToggle}
+            />
+          </div>
+        </div>
+      </div>
       <MainContentStyled>
         <div className='lines'>
           <div className='line-1'></div>
@@ -20,7 +58,7 @@ function App() {
           <div className='line-4'></div>
         </div>
 
-        <Switch>
+        <Switching>
           <Route path='/' exact>
             <HomePage />
           </Route>
@@ -42,7 +80,7 @@ function App() {
           <Route path='/contact' exact>
             <ContactPage />
           </Route>
-        </Switch>
+        </Switching>
 
       </MainContentStyled>
     </div>
