@@ -133,6 +133,24 @@ const GlobalStyle = createGlobalStyle`
         --scrollbar-thump-color: #6b6b6b;
         --scrollbar-track-color: #383838;
     }
+
+    .ham-burger-menu{
+        position: absolute;
+        right: 5%;
+        top: 3%; 
+        display: none;
+        z-index: 15;
+        svg{
+            font-size: 3rem;
+        }
+        @media screen and (max-width:1200px){
+            display: block;
+        }
+    }
+    .nav-toggle{
+        transform: translateX(0);
+        z-index: 20;
+    }
 `;
 
 export default GlobalStyle;
