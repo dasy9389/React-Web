@@ -56,7 +56,7 @@ const portfolios = [
         image: react1,
         link1: 'https://www.google.com',
         link2: 'https://www.google.com',
-        title: 'Responsive Portfolio Website',
+        title: 'Responsive Website',
         text: 'Created using different technologies such as Material UI, Styled-Components and more...'
     },
     {

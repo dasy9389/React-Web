@@ -41,6 +41,12 @@ const  ServiceCardStyled = styled.section`
                 bottom: 0;
                 border-radius: 10px;
             }
+            @media screen and (max-width:1440px){
+                min-height: 123px;
+            }
+            @media screen and (max-width:414px){
+                min-height: inherit;
+            }
         }
 
         p{
