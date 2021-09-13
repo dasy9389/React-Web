@@ -31,6 +31,24 @@ const GlobalStyle = createGlobalStyle`
     body{
         background-color: var(--background-dark-color);
         color: var(--font-light-color);
+        transition: all .4s ease-in-out;
+    }
+    body::-webkit-scrollbar{
+        width: 9px;
+        background-color: #383838;
+    }
+    body::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: #6b6b6b;
+    }
+    body::-webkit-scrollbar-track{
+        border-radius: 10px;
+        background-color: #383838;
+    }
+
+    textarea{
+        max-width: 100%;
+        resize: none;
     }
     a{
         font-family: inherit;
