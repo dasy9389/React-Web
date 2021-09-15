@@ -1,5 +1,5 @@
 react-intersection-observer
-style-components
+styled-components
 react-particles-js
 material/core
 material/icons
