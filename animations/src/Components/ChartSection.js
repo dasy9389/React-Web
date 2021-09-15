@@ -9,7 +9,7 @@ function ChartSection(){
     return(
         <ChartSectionStyled>
             <InnerLayout>
-            <div className="chart-con">
+                <div className="chart-con">
                     <div className="chart-left">
                         <div className="stats">
                             <div className="stats-money">
@@ -52,11 +52,17 @@ const ChartSectionStyled = styled.section`
                     box-shadow: 0px 25px 50px rgba(22, 25, 79, 0.05);
                     border-radius: 62px;
                     width: 100%;
+                    @media screen and (max-width: 845px){
+                        width: 100%;
+                    }
                 }
                 .stats-money{
                     display: flex;
                     padding-bottom: 1.3rem;
                     justify-content: space-between;
+                    @media screen and (max-width: 414px){
+                        flex-direction: column;
+                    }
                 }
             }
         }

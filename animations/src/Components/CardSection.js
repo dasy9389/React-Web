@@ -36,7 +36,15 @@ const CardSectionStyled = styled.section`
         .card-right{
             display: flex;
             justify-content: flex-end;
-            img{filter: drop-shadow(0px 50px 100px rgba(22, 25, 79, 0.15));}
+            @media screen and (max-width: 845px){
+                justify-content: flex-start;
+            }
+            img{
+                filter: drop-shadow(0px 50px 100px rgba(22, 25, 79, 0.15));
+                @media screen and (max-width: 845px){
+                    width: 100%;
+                }
+            }
         }
 
         .card-left{

@@ -17,9 +17,19 @@ const ChartStatsStyled = styled.div`
     height: 10rem;
     padding: 2rem;
     box-shadow: 0px 25px 50px rgba(22, 25, 79, 0.05);
+    @media screen and (max-width: 414px){
+        height: 8rem;
+        padding: 1.8rem;
+    }
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
     h4{
         font-size: 3rem;
         color: var(--purple-primary);
+        @media screen and (max-width: 414px){
+            font-size: 2.3rem;
+        }
     }
     p{
         color: black;

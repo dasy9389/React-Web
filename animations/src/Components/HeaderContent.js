@@ -40,6 +40,9 @@ const HeaderContentStyled = styled.div`
         display: flex;
         align-items: center;
         padding-right: 3rem;
+        @media screen and (max-width: 414px){
+            padding-right: 0;
+        }
         .white{
             color:white;
         }
@@ -71,6 +74,9 @@ const HeaderContentStyled = styled.div`
             left: auto;
             animation: move2 20s infinite;
             transition: all .4s ease-in-out;
+            @media screen and (max-width: 414px){
+                width: 21%;
+            }
         }
         .message1{
             position: absolute;
@@ -79,6 +85,9 @@ const HeaderContentStyled = styled.div`
             left: auto;
             animation: move 5s infinite;
             transition: all .4s ease-in-out;
+            @media screen and (max-width: 414px){
+                width: 22%;
+            }
         }
         .message2{
             position: absolute;
@@ -88,6 +97,33 @@ const HeaderContentStyled = styled.div`
             animation: move 8s infinite;
             animation-delay: .5s;
             transition: all .4s ease-in-out;
+            @media screen and (max-width: 414px){
+                width: 22%;
+            }
+        }
+    }
+
+    //Header Animations
+    @keyframes move{
+        0%{
+            transform: translateY(0) rotate(0) scale(1) translateX(0);
+        }
+        50%{
+            transform: translateY(-10px) rotate(20deg) scale(1.1) translateX(10px);
+        }
+        100%{
+            transform: translateY(0)  rotate(0deg) scale(1) translateX(0);
+        }
+    }
+    @keyframes move2{
+        0%{
+            transform: translateY(0) rotate(0) scale(1) translateX(0);
+        }
+        50%{
+            transform: translateY(-10px) rotate(60deg) scale(1.1) translateX(10px);
+        }
+        100%{
+            transform: translateY(0)  rotate(0deg) scale(1) translateX(0);
         }
     }
 `;

@@ -7,7 +7,7 @@ function Footer(){
     return(
         <FooterStyled>
             <InnerLayout>
-            <div className="footer-con">
+                <div className="footer-con">
                     <div className="logo-con">
                        <div className="logo-items">
                         <img src={logo} alt="" />
@@ -70,9 +70,15 @@ const FooterStyled = styled.footer`
     @media screen and (max-width: 990px){
         padding: 5rem 4rem;
     }
+    @media screen and (max-width: 414px){
+        padding: 5rem 1.5rem;
+    }
     .footer-con{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        @media screen and (max-width: 414px){
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .logo-con{

@@ -33,6 +33,9 @@ const HeaderStyled = styled.header`
         @media screen and (max-width: 990px){
             padding: 5rem 4rem;
         }
+        @media screen and (max-width: 414px){
+            padding: 5rem 1.5rem;
+        }
     }
 `;
 

@@ -24,14 +24,19 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--neutral-light);
         color: white;
         font-size: 1.2rem;
+        /* @media screen and (max-width: 414px){
+            overflow-x: hidden;
+        } */
     }
-
     a{
         color: inherit;
     }
     p{
         color: var(--lavender-secondary);
         line-height: 1.9rem;
+    }
+    span{
+        color: var(--accent-pink);
     }
     .secondary-heading{
         font-size: 3rem;
@@ -43,9 +48,7 @@ const GlobalStyle = createGlobalStyle`
         color: var(--purple-primary);
         text-align: center;
     }
-    span{
-        color: var(--accent-pink);
-    }
+    
 
     //Utilities
     .c-para{

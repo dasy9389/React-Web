@@ -13,7 +13,7 @@ function MessagingSection(){
     return(
         <MessagingSectionStyled>
             <InnerLayout>
-            <div className="message-con">
+            <div   div className="message-con">
                     <div className="left-items">
                         <h2 className="secondary-heading">
                             We support you in 5 different languages
@@ -33,7 +33,7 @@ function MessagingSection(){
                         <img src={bgCircles} className="bgCircle" alt="" />
                     </div>
                     <div className="right-items">
-                        <img src={messaging} alt="" />
+                        <img src={messaging} alt="" className='messaging' />
                         <img src={bgCircles} alt="" className="bgCircle" />
                     </div>
                 </div>
@@ -82,6 +82,11 @@ const MessagingSectionStyled = styled.section`
             bottom: -7%;
             right: 0;
             z-index: -1;
+        }
+        .messaging{
+            @media screen and (max-width: 845px){
+                width: 100%;
+            }
         }
     }
 `;
