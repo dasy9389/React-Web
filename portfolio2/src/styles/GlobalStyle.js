@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
         text-transform: capitalize;
         font-family: 'Roboto', sans-serif;
         overflow-x: hidden;
+        position: relative;
     }
     .App{
         height: 100vh;

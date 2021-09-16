@@ -28,7 +28,6 @@ function App() {
 const MainStyled = styled.main`
   width: 100%;
   height: calc(100% - 70px);
-  background-color: lightsalmon;
   position: relative;
   top: 70px;
   scroll-behavior: smooth;
@@ -37,9 +36,9 @@ const MainStyled = styled.main`
   &::-webkit-scrollbar{
       display: none;
   }
-  > *{
+  section{
     width: 100vw;
-    height: calc(100% - 70px);
+    height: 100%;
     scroll-snap-align: start;
   }
 `;
