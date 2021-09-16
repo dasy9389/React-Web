@@ -17,12 +17,18 @@ const ChartStatsStyled = styled.div`
     height: 10rem;
     padding: 2rem;
     box-shadow: 0px 25px 50px rgba(22, 25, 79, 0.05);
+    flex: 1;
+    
     @media screen and (max-width: 414px){
         height: 8rem;
         padding: 1.8rem;
     }
     &:not(:last-child){
         margin-bottom: 1rem;
+        margin-right: 1rem;
+        @media screen and (max-width: 414px){
+            margin-right: 0;
+        }
     }
     h4{
         font-size: 3rem;

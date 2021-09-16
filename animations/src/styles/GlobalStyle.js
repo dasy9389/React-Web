@@ -18,15 +18,13 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Nunito', sans-serif;
         text-decoration: none;
+        overflow-x: hidden;
     }
 
     body{
         background-color: var(--neutral-light);
         color: white;
         font-size: 1.2rem;
-        /* @media screen and (max-width: 414px){
-            overflow-x: hidden;
-        } */
     }
     a{
         color: inherit;
