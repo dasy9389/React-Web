@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-function PortfolioItem({portfolioItem}){
+function PortfolioItem({data}){
     return(
         <PortfolioItemStyled>
             <div className='container'>
                 {
-                    portfolioItem.map((item)=>{
+                    data.map((item)=>{
                         return(
                             <div className='item' key={item.id}>
                                 <img src={item.img} alt='' />
@@ -24,15 +24,20 @@ const PortfolioItemStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
     .container {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grap: 1rem;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
         @media(max-width:768px){
             width: 100%;
         }
+
         .item {
+            width: 220px;
+            height: 150px;
             border-radius: 20px;
             border: 1px solid rgb(240, 239, 239);
             margin: 10px 20px;
@@ -48,18 +53,20 @@ const PortfolioItemStyled = styled.div`
                 width: 130px;
                 height: 100px;
             }
+
             h3 {
                 position: absolute;
                 font-size: 20px;
-                padding: 0 10px;
                 text-align: center;
             }
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 z-index: 1;
             }
+
             &:hover {
                 background-color: var(--mainColor);
                 img {

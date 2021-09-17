@@ -1,42 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 
-function ButtonMenu({filter,button}){
+function ButtonMenu({id, title, setSelected, active}){
     return(
-        <ButtonMenuStyled>
-            {button.map((btn,i)=>{
-                return(
-                    <ButtonStyled 
-                    key={i}
-                    onClick={()=>filter(btn)}>
-                        {btn}
-                    </ButtonStyled>
-                );
-
-            })}
-        </ButtonMenuStyled>
+        <ButtonStyled 
+            className={active ? 'active' : ''}
+            onClick={()=>setSelected(id)}
+            >
+            {title}
+        </ButtonStyled>
     );
 }
-const  ButtonStyled = styled.button`
+const  ButtonStyled = styled.li`
     font-size: 14px;
-    margin-right: 20px;
-    padding: 7px 20px;
+    margin-right: 50px;
+    padding: 7px;
     border-radius: 10px;
     cursor: pointer;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
+
     @media(max-width:768px){
         margin-right: 20px;
     }
 
-    &:active, &:focus {
+    &.active {
         background-color: var(--mainColor);
         color: white;
-    }
-`;
-const ButtonMenuStyled = styled.div`
-    padding: 20px;
+    }  
 `;
 
 export default ButtonMenu;
